@@ -173,7 +173,6 @@
     <!-- https://api.whatsapp.com/send?phone=919234360028 -->
 
     <!-- Products start -->
-    
     <div class="container-fluid pt-5 pb-3">
       <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
         <span class="bg-white pr-3">Featured Products</span>
@@ -227,11 +226,11 @@
         var price = encodeURIComponent(
           productItem.querySelector(".text-center h5").innerText
         );
-        var imageSrc = encodeURIComponent(
-          productItem.querySelector(".img-fluid").src
-        );
-        var message = `I want to buy ${productName}%0A%0APrice: ${price}%0A%0AImage: ${imageSrc}`;
-        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
+        var imageSrc = productItem.querySelector(".img-fluid").src;
+        var message = `I want to buy ${productName}\n\nPrice: ${price}\n\nImage: ${imageSrc}`;
+        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${encodeURIComponent(
+          message
+        )}`;
         window.location.href = whatsappURL;
       }
     </script>
