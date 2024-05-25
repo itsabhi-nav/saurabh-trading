@@ -222,21 +222,11 @@
         var price = encodeURIComponent(
           document.querySelector(".text-center h5").innerText
         );
-        var imageSrc = encodeURIComponent(
-          document.querySelector(".img-fluid").src
-        );
-        var message =
-          "I want to buy " +
-          productName +
-          "%0A" +
-          "Price: " +
-          price +
-          "%0A" +
-          "Image: " +
-          imageSrc;
-
-        var whatsappURL =
-          "https://api.whatsapp.com/send?phone=919234360028&text=" + message;
+        var imageSrc = document.querySelector(".img-fluid").src;
+        var message = `I want to buy ${productName}\nPrice: ${price}\nImage: ${imageSrc}`;
+        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${encodeURIComponent(
+          message
+        )}`;
         window.location.href = whatsappURL;
       }
     </script>
