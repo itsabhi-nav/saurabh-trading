@@ -182,6 +182,18 @@
           <div class="product-item bg-light mb-4">
             <div class="product-img position-relative overflow-hidden">
               <img class="img-fluid w-100" src="img/image1.jpeg" alt="" />
+              <img
+                class="img-fluid w-100"
+                src="img/latest.jpeg"
+                alt=""
+                style="display: none"
+              />
+              <img
+                class="img-fluid w-100"
+                src="img/latest2.jpeg"
+                alt=""
+                style="display: none"
+              />
             </div>
             <div class="text-center py-4">
               <a class="h6 text-decoration-none text-truncate" href="">
@@ -226,10 +238,13 @@
         var price = encodeURIComponent(
           productItem.querySelector(".text-center h5").innerText
         );
-        var imageSrc = encodeURIComponent(
-          productItem.querySelector(".img-fluid").src
-        );
-        var message = `I want to buy ${productName}%0A%0APrice: ${price}%0A%0AImage: ${imageSrc}`;
+        var imageElements = productItem.querySelectorAll(".img-fluid");
+        var imageLinks = Array.from(imageElements)
+          .map((img) => img.src)
+          .join("%0A");
+
+        var message = `I want to buy ${productName}%0A%0APrice: ${price}%0A%0AImages:%0A${imageLinks}`;
+
         var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
         window.location.href = whatsappURL;
       }
