@@ -210,6 +210,7 @@
             </div>
           </div>
         </div>
+        <!-- Add additional products similarly -->
       </div>
     </div>
 
@@ -221,9 +222,11 @@
         var price = encodeURIComponent(
           document.querySelector(".text-center h5").innerText
         );
-        var imageSrc = document.querySelector(".img-fluid").src;
-        var whatsappURL =
-          "https://api.whatsapp.com/send?phone=919234360028&text=I%20want%20to%20buy%20" +
+        var imageSrc = encodeURIComponent(
+          document.querySelector(".img-fluid").src
+        );
+        var message =
+          "I want to buy " +
           productName +
           "%0A" +
           "Price: " +
@@ -231,6 +234,9 @@
           "%0A" +
           "Image: " +
           imageSrc;
+
+        var whatsappURL =
+          "https://api.whatsapp.com/send?phone=919234360028&text=" + message;
         window.location.href = whatsappURL;
       }
     </script>
