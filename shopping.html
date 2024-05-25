@@ -181,7 +181,11 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
           <div class="product-item bg-light mb-4">
             <div class="product-img position-relative overflow-hidden">
-              <img class="img-fluid w-100" src="img/image1.jpeg" alt="" />
+              <img
+                class="img-fluid w-100"
+                src="img/image1.jpeg"
+                alt="Apple iPhone 15 Pro Max (256 GB)"
+              />
             </div>
             <div class="text-center py-4">
               <a class="h6 text-decoration-none text-truncate" href="">
@@ -226,10 +230,20 @@
         var price = encodeURIComponent(
           productItem.querySelector(".text-center h5").innerText
         );
+        var originalPrice = encodeURIComponent(
+          productItem.querySelector(".text-center h6 del").innerText
+        );
+        var rating = productItem.querySelectorAll(
+          ".fa-star.text-primary"
+        ).length;
+        var reviews = encodeURIComponent(
+          productItem.querySelector(".text-center small:nth-of-type(6)")
+            .innerText
+        );
         var imageSrc = encodeURIComponent(
           productItem.querySelector(".img-fluid").src
         );
-        var message = `I want to buy ${productName}%0A%0APrice: ${price}%0A%0AImage: ${imageSrc}`;
+        var message = `I want to buy the following product:\n\nProduct Name: ${productName}\nPrice: ${price}\nOriginal Price: ${originalPrice}\nRating: ${rating} stars\nReviews: ${reviews}\n\nImage: ${imageSrc}`;
         var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
         window.location.href = whatsappURL;
       }
