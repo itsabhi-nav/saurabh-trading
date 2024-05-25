@@ -226,11 +226,11 @@
         var price = encodeURIComponent(
           productItem.querySelector(".text-center h5").innerText
         );
-        var imageSrc = productItem.querySelector(".img-fluid").src;
-        var message = `I want to buy ${productName}\n\nPrice: ${price}\n\nImage: ${imageSrc}`;
-        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${encodeURIComponent(
-          message
-        )}`;
+        var imageSrc = encodeURIComponent(
+          productItem.querySelector(".img-fluid").src
+        );
+        var message = `I want to buy ${productName}%0A%0APrice: ${price}%0A%0AImage: ${imageSrc}`;
+        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
         window.location.href = whatsappURL;
       }
     </script>
