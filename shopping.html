@@ -184,9 +184,9 @@
               <img class="img-fluid w-100" src="img/image1.jpeg" alt="" />
             </div>
             <div class="text-center py-4">
-              <a class="h6 text-decoration-none text-truncate" href=""
-                >Apple iPhone 15 Pro Max (256 GB)</a
-              >
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Apple iPhone 15 Pro Max (256 GB)
+              </a>
               <div
                 class="d-flex align-items-center justify-content-center mt-2"
               >
@@ -218,13 +218,22 @@
         var productName = encodeURIComponent(
           document.querySelector(".text-truncate").innerText
         );
+        var price = encodeURIComponent(
+          document.querySelector(".text-center h5").innerText
+        );
+        var imageSrc = document.querySelector(".img-fluid").src;
         var whatsappURL =
           "https://api.whatsapp.com/send?phone=919234360028&text=I%20want%20to%20buy%20" +
-          productName;
+          productName +
+          "%0A" +
+          "Price: " +
+          price +
+          "%0A" +
+          "Image: " +
+          imageSrc;
         window.location.href = whatsappURL;
       }
     </script>
-
     <!-- Products end -->
 
     <!-- Brand Start -->
