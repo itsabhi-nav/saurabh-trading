@@ -33,6 +33,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <!-- Icon Font Stylesheet -->
     <link
@@ -492,41 +496,248 @@
     </script>
     <!-- Products end -->
 
-    <!-- Brand Start -->
+    <!-- Featured Start -->
+    <div class="container-fluid pt-5">
+      <div class="row px-xl-5 pb-3">
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div class="d-flex align-items-center border mb-4 p-4">
+            <i class="fa fa-check text-primary m-0 mr-3"></i>
+            <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div class="d-flex align-items-center border mb-4 p-4">
+            <i class="fa fa-truck text-primary m-0 mr-3"></i>
+            <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div class="d-flex align-items-center border mb-4 p-4">
+            <i class="fas fa-exchange-alt text-primary m-0 mr-3"></i>
+            <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div class="d-flex align-items-center border mb-4 p-4">
+            <i class="fa fa-phone-volume text-primary m-0 mr-3"></i>
+            <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featured End -->
+
+    <!-- Brand Starts -->
     <div class="brands-section">
-      <h2>Our Brand Partners</h2>
+      <h2>Our Brands</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra
-        at massa sit amet ultricies. Nullam consequat, mauris non interdum
-        cursus
+        Discover the brands we collaborate with. They enhance our offerings,
+        making them even better. Explore our partnerships, each adding value and
+        quality to our products and services.
       </p>
       <div class="slider">
         <div class="slides">
           <img
             src="https://1000logos.net/wp-content/uploads/2021/08/Xiaomi-logo.jpg"
-            alt="Sport England"
+            alt="Brand 1"
           />
-          <img src="img/brand2.jpeg" alt="Quintiles" />
-          <img src="img/brand3.jpeg" alt="India Capital" />
-          <img src="img/brand4.jpeg" alt="PaperlinX" />
-          <img src="img/brand5.jpeg" alt="InfraRed" />
-          <img src="img/brand6.jpeg" alt="Sport England" />
-          <img src="img/brand7.jpeg" alt="Quintiles" />
-          <!-- Duplicate set of images for infinite scrolling effect -->
+          <img src="img/brand2.jpeg" alt="Brand 2" />
+          <img src="img/brand3.jpeg" alt="Brand 3" />
+          <img src="img/brand4.jpeg" alt="Brand 4" />
+          <img src="img/brand5.jpeg" alt="Brand 5" />
+          <img src="img/brand7.jpeg" alt="Brand 6" />
+          <img src="img/brnad6.jpeg" alt="Brand 7" />
+          <img src="img/brand4.jpeg" alt="Brand 8" />
+          <!-- Duplicate images for continuous effect -->
           <img
             src="https://1000logos.net/wp-content/uploads/2021/08/Xiaomi-logo.jpg"
-            alt="Sport England"
+            alt="Brand 1"
           />
-          <img src="img/brand2.jpeg" alt="Quintiles" />
-          <img src="img/brand3.jpeg" alt="India Capital" />
-          <img src="img/brand4.jpeg" alt="PaperlinX" />
-          <img src="img/brand5.jpeg" alt="InfraRed" />
-          <img src="img/brand6.jpeg" alt="Sport England" />
-          <img src="img/brand7.jpeg" alt="Quintiles" />
+          <img src="img/brand2.jpeg" alt="Brand 2" />
+          <img src="img/brand3.jpeg" alt="Brand 3" />
+          <img src="img/brand4.jpeg" alt="Brand 4" />
+          <img src="img/brand5.jpeg" alt="Brand 5" />
+          <img src="img/brand7.jpeg" alt="Brand 6" />
+          <img src="img/brnad6.jpeg" alt="Brand 7" />
+          <img src="img/brand4.jpeg" alt="Brand 8" />
         </div>
       </div>
     </div>
+
     <!-- Brand End -->
+
+    <!-- Enquiry Start -->
+    <div class="container-fluid pt-5 pb-3">
+      <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+        <span class="bg-white pr-3">Enquire Now</span>
+      </h2>
+      <p>
+        Find your favorite brand's phone here. Ask us anything about buying it!
+      </p>
+
+      <div class="row px-xl-5">
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img
+                class="img-fluid w-100"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Xiaomi_logo.svg/768px-Xiaomi_logo.svg.png"
+                alt=""
+              />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Xiaomi
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="img/enquire2.jpeg" alt="" />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Samsung
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="img/brand3.jpeg" alt="" />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Realme
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="img/enquire4.jpeg" alt="" />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                One Plus
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="img/enquire6.jpeg" alt="" />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Vivo
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="img/enquire5.jpeg" alt="" />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Apple
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="img/enquire7.jpeg" alt="" />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Oppo
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+          <div
+            class="product-item bg-light mb-4"
+            onclick="redirectToWhatsApp(this)"
+          >
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="img/poco.jpeg" alt="" />
+            </div>
+            <div class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">
+                Oppo
+              </a>
+              <!-- Enquire Now button -->
+              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function redirectToWhatsApp(productItem) {
+        var productName = encodeURIComponent(
+          productItem.querySelector(".text-truncate").innerText.trim()
+        );
+        var message = `I want to enquire about ${productName} brand.`;
+        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
+        window.open(whatsappURL, "_blank"); // Open WhatsApp in a new tab
+      }
+    </script>
+
+    <!-- Enquiry end  -->
 
     <!-- Footer Start -->
     <div

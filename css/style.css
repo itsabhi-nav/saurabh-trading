@@ -668,6 +668,15 @@ Notification Bar
   }
 }
 
+.container-fluid p {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 80%;
+  margin: 0 auto; /* Centers the paragraph horizontally */
+  text-align: center; /* Aligns the text center */
+}
+
 /*========================== Brand Section ===========================*/
 .brands-section {
   text-align: center;
@@ -682,9 +691,12 @@ Notification Bar
 }
 
 .brands-section p {
-  color: #7f8c8d;
+  color: black;
   font-size: 16px;
   margin-bottom: 20px;
+  width: 80%;
+  margin: 0 auto; /* Centers the paragraph horizontally */
+  text-align: center; /* Aligns the text center */
 }
 
 .slider {
@@ -694,11 +706,14 @@ Notification Bar
   margin: 0 auto;
   overflow: hidden;
   border-radius: 8px;
+  margin-top: 2rem;
 }
 
 .slides {
   display: flex;
-  width: calc(200% + 10px); /* Adjusted to accommodate the duplicated images */
+  width: calc(
+    200% + 80px
+  ); /* Adjust to the number of images (8 original + 8 duplicates) */
   animation: slide 10s linear infinite; /* Adjust duration for smoother scrolling */
 }
 
@@ -715,7 +730,7 @@ Notification Bar
   100% {
     transform: translateX(
       -50%
-    ); /* Slide by half the width to create an infinite loop */
+    ); /* Slide by half the width to create a seamless loop */
   }
 }
 
@@ -730,4 +745,72 @@ Notification Bar
   .slides img {
     height: 100px; /* Adjust height for even smaller screens */
   }
+}
+
+/* Enguire Now */
+<style > .product-item {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Hide overflowing button */
+}
+
+.product-img {
+  position: relative;
+}
+
+.enquire-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block; /* Show the button by default */
+  transition: bottom 0.3s, transform 0.3s; /* Add transition for smooth movement */
+}
+
+.product-item:hover .enquire-btn {
+  bottom: 50%; /* Move button to center vertically */
+  transform: translate(-50%, -50%); /* Move button to center horizontally */
+}
+
+/* Additional styles for the button */
+.enquire-btn button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+/* Button hover effect */
+.enquire-btn button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/*======= Hover ==========*/
+
+/* Ensure icons and text align properly */
+.d-flex.align-items-center {
+  padding: 30px;
+}
+
+.d-flex.align-items-center i {
+  font-size: 2rem; /* Adjust the icon size */
+}
+
+.d-flex.align-items-center h5 {
+  font-weight: 600; /* Make the text semi-bold */
+  margin: 0;
+}
+
+.border {
+  border: 1px solid #ddd; /* Add a light border */
+  border-radius: 5px; /* Add slight rounding to the corners */
+  transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.border:hover {
+  border-color: #007bff; /* Change border color on hover */
+  background-color: #f0f0f0; /* Change background color on hover */
 }
