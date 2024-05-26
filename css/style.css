@@ -669,15 +669,11 @@ Notification Bar
 }
 
 /*========================== Brand Section ===========================*/
-
 .brands-section {
   text-align: center;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  /* width: 80%; */
-  /* max-width: 900px; */
 }
 
 .brands-section h2 {
@@ -702,13 +698,14 @@ Notification Bar
 
 .slides {
   display: flex;
-  animation: slide 30s linear infinite;
-  width: calc(100% * 8 / 3); /* 8 images, showing 3 at a time */
+  width: calc(200% + 10px); /* Adjusted to accommodate the duplicated images */
+  animation: slide 10s linear infinite; /* Adjust duration for smoother scrolling */
 }
 
 .slides img {
-  min-width: calc(100% / 3); /* Show 3 images at a time */
-  box-sizing: border-box;
+  height: 150px; /* Set a fixed height */
+  object-fit: contain; /* Ensure images are not distorted */
+  margin-right: 10px; /* Add some spacing between images */
 }
 
 @keyframes slide {
@@ -716,41 +713,21 @@ Notification Bar
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% * 8 / 3)); /* Slide by the total width */
+    transform: translateX(
+      -50%
+    ); /* Slide by half the width to create an infinite loop */
   }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .slides {
-    width: calc(100% * 8 / 2); /* Show 2 images at a time */
-  }
   .slides img {
-    min-width: calc(100% / 2);
-  }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-100% * 8 / 2)); /* Slide by the total width */
-    }
+    height: 120px; /* Adjust height for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-  .slides {
-    width: calc(100% * 8); /* Show 1 image at a time */
-  }
   .slides img {
-    min-width: 100%;
-  }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-100% * 8)); /* Slide by the total width */
-    }
+    height: 100px; /* Adjust height for even smaller screens */
   }
 }
