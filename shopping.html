@@ -149,7 +149,7 @@
       </button>
       <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
         <div class="navbar-nav ms-auto">
-         <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="index.html" class="nav-item nav-link active">Home</a>
           <a href="about.html" class="nav-item nav-link">About</a>
           <a href="service.html" class="nav-item nav-link">Services</a>
           <a href="shopping.html" class="nav-item nav-link">Shop Now</a>
@@ -189,9 +189,9 @@
               <img class="img-fluid w-100" src="img/image1.jpeg" alt="" />
             </div>
             <div class="text-center py-4">
-              <a class="h6 text-decoration-none text-truncate" href="">
-                Apple iPhone 15 Pro Max (256 GB)
-              </a>
+              <a class="h6 text-decoration-none text-truncate" href=""
+                >Apple iPhone 15 Pro Max (256 GB)</a
+              >
               <div
                 class="d-flex align-items-center justify-content-center mt-2"
               >
@@ -445,10 +445,10 @@
               <img class="img-fluid w-100" src="img/image8.jpeg" alt="" />
             </div>
             <div class="text-center py-4">
-              <a class="h6 text-decoration-none text-truncate" href="">
-                Oppo Reno 11 5G (Wave Green,256 GB) <br />
-                (8 GB RAM)
-              </a>
+              <a class="h6 text-decoration-none text-truncate" href=""
+                >Oppo Reno 11 5G (Wave Green,256 GB) <br />
+                (8 GB RAM)</a
+              >
               <div
                 class="d-flex align-items-center justify-content-center mt-2"
               >
@@ -478,23 +478,50 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
       function redirectToWhatsApp(button) {
-        var productItem = button.closest(".product-item");
-        var productName = encodeURIComponent(
-          productItem.querySelector(".text-truncate").innerText
-        );
-        var price = encodeURIComponent(
-          productItem.querySelector(".text-center h5").innerText
-        );
-        var imageSrc = encodeURIComponent(
-          productItem.querySelector(".img-fluid").src
-        );
-        var message = `I want to buy ${productName}%0A%0APrice: ${price}%0A%0AImage: ${imageSrc}`;
-        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
-        window.location.href = whatsappURL;
+        try {
+          // Find the parent product item
+          var productItem = button.closest(".product-item");
+          if (!productItem) {
+            console.error("Parent product item not found");
+            return;
+          }
+
+          // Extract product name
+          var productNameElem = productItem.querySelector(".text-truncate");
+          if (!productNameElem) {
+            console.error("Product name element not found");
+            return;
+          }
+          var productName = encodeURIComponent(
+            productNameElem.innerText.trim()
+          );
+
+          // Extract price
+          var priceElem = productItem.querySelector(".text-center h5");
+          if (!priceElem) {
+            console.error("Price element not found");
+            return;
+          }
+          var price = encodeURIComponent(priceElem.innerText.trim());
+
+          // Construct WhatsApp message
+          var message = `I want to buy ${productName}%0A%0APrice: ${price}`;
+
+          // Construct WhatsApp URL with message
+          var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
+
+          // Log for debugging
+          console.log("Redirecting to WhatsApp with URL: ", whatsappURL);
+
+          // Redirect to WhatsApp
+          window.location.href = whatsappURL;
+        } catch (error) {
+          console.error("Error in redirectToWhatsApp function: ", error);
+        }
       }
-    </script>
+    </script> -->
     <!-- Products end -->
 
     <!-- Featured Start -->
@@ -594,7 +621,12 @@
                 Xiaomi
               </a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
@@ -612,7 +644,12 @@
                 Samsung
               </a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
@@ -630,7 +667,12 @@
                 Realme
               </a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
@@ -648,7 +690,12 @@
                 One Plus
               </a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
@@ -666,7 +713,12 @@
                 Vivo
               </a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
@@ -684,25 +736,30 @@
                 Apple
               </a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <div
-            class="product-item bg-light mb-4"
-            onclick="redirectToWhatsApp(this)"
-          >
+          <div class="product-item bg-light mb-4">
             <div class="product-img position-relative overflow-hidden">
               <img class="img-fluid w-100" src="img/enquire7.jpeg" alt="" />
             </div>
             <div class="text-center py-4">
-              <a class="h6 text-decoration-none text-truncate" href="">
-                Oppo
-              </a>
+              <a class="h6 text-decoration-none text-truncate" href="">Oppo</a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
@@ -720,21 +777,84 @@
                 Oppo
               </a>
               <!-- Enquire Now button -->
-              <button class="btn btn-primary enquire-btn">Enquire Now</button>
+              <button
+                class="btn btn-primary enquire-btn"
+                onclick="redirectToWhatsAppProduct(this.closest('.product-item'))"
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Scripts -->
     <script>
-      function redirectToWhatsApp(productItem) {
-        var productName = encodeURIComponent(
-          productItem.querySelector(".text-truncate").innerText.trim()
-        );
-        var message = `I want to enquire about ${productName} brand.`;
-        var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
-        window.open(whatsappURL, "_blank"); // Open WhatsApp in a new tab
+      // First script: for purchasing
+      function redirectToWhatsApp(button) {
+        try {
+          // Find the parent product item
+          var productItem = button.closest(".product-item");
+          if (!productItem) {
+            console.error("Parent product item not found");
+            return;
+          }
+
+          // Extract product name
+          var productNameElem = productItem.querySelector(".text-truncate");
+          if (!productNameElem) {
+            console.error("Product name element not found");
+            return;
+          }
+          var productName = encodeURIComponent(
+            productNameElem.innerText.trim()
+          );
+
+          // Extract price
+          var priceElem = productItem.querySelector(".text-center h5");
+          if (!priceElem) {
+            console.error("Price element not found");
+            return;
+          }
+          var price = encodeURIComponent(priceElem.innerText.trim());
+
+          // Construct WhatsApp message for purchasing
+          var message = `I want to buy ${productName}%0A%0APrice: ${price}`;
+
+          // Construct WhatsApp URL with message
+          var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
+
+          // Log for debugging
+          console.log(
+            "Redirecting to WhatsApp for purchasing with URL: ",
+            whatsappURL
+          );
+
+          // Redirect to WhatsApp
+          window.location.href = whatsappURL;
+        } catch (error) {
+          console.error(
+            "Error in redirectToWhatsApp function for purchasing: ",
+            error
+          );
+        }
+      }
+
+      // Second script: for enquiry
+      function redirectToWhatsAppProduct(productItem) {
+        try {
+          var productName = encodeURIComponent(
+            productItem.querySelector(".text-truncate").innerText.trim()
+          );
+          var message = `I want to enquire about ${productName} brand.`;
+          var whatsappURL = `https://api.whatsapp.com/send?phone=919234360028&text=${message}`;
+          window.open(whatsappURL, "_blank"); // Open WhatsApp in a new tab
+        } catch (error) {
+          console.error(
+            "Error in redirectToWhatsAppProduct function for enquiry: ",
+            error
+          );
+        }
       }
     </script>
 
